@@ -6,11 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flights</title>
   <link rel='stylesheet' href='/stylesheets/style.css' />
+  <title><%= title %></title>
 </head>
 <body>
   <nav>
-    <a href="/">Home</a>
-    <a href="/flights/">All Flights</a>
-    <a href="/flights/add">Add Flight</a>
+    <img src="/images/airplane.svg">
+    <a href="/flights/" <%- title === 'All Flights' ? 'class="active"' : '' %>>ALL FLIGHTS</a>
+    <a href="/flights/add" <%- title === 'Add Flight' ? 'class="active"' : '' %>>ADD FLIGHT</a>
   </nav>
-  
+  <main>
+    <h1><%= title %></h1>

@@ -1,14 +1,12 @@
 <%- include('../partials/header') %>
 
-<h2>Enter Flight Info</h2>
-<form action="/flights" method="POST">
-    <label>Flight Number: 
-        <input type="number" name="flightNo" pattern="\d{10, 9999}">
-    </label><br>
-    <label>Airline: 
-        <input type="text" name="airline">
-    </label><br>
-    <label>Airport:
+
+<form id="add-form" action="/flights" method="POST">
+    <label>Flight Number: </label>
+    <input type="number" name="flightNo">
+    <label>Airline: </label>
+    <input type="text" name="airline">
+    <label>Airport: </label>
         <select name="airport">
             <option value="LAX">LAX</option>
             <option value="DEN">DEN</option>
@@ -18,10 +16,9 @@
             <option value="RDU">RDU</option>
             <option value="BWI">BWI</option>
             <option value="ORL">ORL</option>
-        </select><br>
-    <label>Departs: 
-        <input type="datetime-local" name="departs">
-    </label><br>
+        </select>
+    <label>Departs: </label>
+    <input type="datetime-local" name="departs">
     <button type="submit">Add Flight</button>
 </form>
 

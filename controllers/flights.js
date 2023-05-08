@@ -1,7 +1,7 @@
 const Flight = require('../models/flight')
 
 function addFlight(req, res){
-    res.render('flights/add')
+    res.render('flights/add', {title: 'Add Flight'})
 }
 
 function create(req, res){
@@ -20,7 +20,7 @@ function create(req, res){
 function index(res, res){
     Flight.find({})
     .then(flightDocs => {
-        res.render('flights/index', {flights: flightDocs})
+        res.render('flights/index', {flights: flightDocs, title: 'All Flights'})
     })
     .catch(err => {
         console.log('===================================err')
@@ -33,7 +33,7 @@ function index(res, res){
 function show(req, res){
     Flight.findById(req.params.id)
         .then(flight => {
-            res.render('flights/show', {flight: flight})
+            res.render('flights/show', {flight: flight, title: 'Flight Detail'})
         })
         .catch(err => {
             console.log('===================================err')

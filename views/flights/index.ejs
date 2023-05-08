@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-<table>
+<table id="flight-list">
     <thead>
         <tr>
             <th>Flight<br>Number</th>
@@ -16,6 +16,7 @@
                 <td><%= flight.airline %></td>
                 <td><%= flight.airport %></td>
                 <td><%= flight.departs %></td>
+                <td><a href="/flights/<%= flight._id %>">DETAILS</a></td>
             </tr>
         <% }) %>
     </tbody>
