@@ -5,7 +5,6 @@
 }
 
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin: 0;
   height: 100vh;
@@ -106,19 +105,19 @@ table td {
   font-weight: bold;
 }
 
-#add-destination-form {
+#add-destination-form, #add-ticket-form {
   display: grid;
   grid-template-rows: auto auto;
   gap: 1rem;
 }
 
-#add-destination-form input[type='submit']{
+#add-destination-form input[type='submit'], #add-ticket-form input[type='submit']{
   width: 10rem;
   grid-column: 2 / 4;
   margin-bottom: 2rem;
 }
 
-#add-destination-form select{
+#add-destination-form select, #add-ticket-form select{
   width: 5rem;
 }
 
@@ -128,7 +127,7 @@ table td {
   grid-template-columns: repeat(2, minmax(auto, 22rem));
 }
 
-#add-form *, #add-destination-form * {
+#add-form *, #add-destination-form *, add-ticket-form * {
   font-size: 20px;
   padding: 5px;
   border-radius: 5px;
